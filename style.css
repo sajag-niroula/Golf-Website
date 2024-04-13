@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrad";
+}
+html {
+  font-size: 18px;
+}
+.container {
+  height: 100vh;
+}
+.container-img {
+  background-image: url("./golf.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+.navbar {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: blue; */
+  position: relative;
+}
+.image {
+  flex-grow: 1;
+}
+.image > img {
+  height: 70px;
+  margin-left: 20px;
+  color: rgba(0, 0, 255, 0.5);
+}
+.menu {
+  display: none;
+  justify-self: flex-end;
+  cursor: pointer;
+}
+.fas {
+  font-weight: 900;
+  font-size: 26px;
+}
+.nav {
+  display: flex;
+  flex-grow: 3;
+  justify-content: space-evenly;
+}
+.nav > h1 {
+  display: inline-block;
+  font-size: 23px;
+  color: rgba(0, 0, 255, 0.4);
+  font-weight: bolder;
+}
+.nav > h1:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 255, 0.8);
+  transition: 0.5s ease-in-out !important;
+  transform: scale(1.1) translateY(-5px);
+}
+/* main section begins */
+
+.textcenter {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding-top: 50px;
+}
+.maintext {
+  /* z-index: 1; */
+  background-color: rgba(31, 224, 66, 0.5);
+  max-width: 400px;
+  height: auto;
+  align-items: center;
+  padding: 2rem;
+}
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: blue transparent;
+}
+.article h1 {
+  color: rgba(68, 68, 250, 1);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  transform: matrix(1);
+}
+.article h1:hover {
+  color: blue;
+}
+.article button {
+  border-radius: 10px;
+  background-color: rgb(77, 142, 77);
+  color: white;
+  text-align: center;
+  padding: 7px;
+}
+.article button:hover {
+  background: rgb(79, 206, 79);
+  color: white;
+  display: inline;
+  transition: 0.4s ease-in-out;
+}
+.article p {
+  font-size: 1.2em;
+  word-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+}
+/* next section begins */
+.cardcontainer {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  padding: 5%;
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.card {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+  animation: fadein 3s linear both;
+  animation-timeline: view();
+}
+.card-img {
+  height: 200px;
+}
+.card:hover {
+  transition: 2s ease-in-out;
+  transform: scale(1.1);
+}
+.container-two {
+  height: contain;
+}
+.golfpic {
+  background-image: url(./golfpic.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+/* section 3 starts */
+.container3 {
+  height: 40vh;
+  padding: 20px;
+  animation: fadein 3s both;
+  animation-timeline: view();
+}
+.row {
+  height: 400px;
+  width: 20vw;
+  background-color: #294cbe;
+  position: relative;
+  padding-top: 40px;
+}
+.contentbox {
+  height: 80%;
+  width: 80vw;
+  margin-left: 10vw;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.contentimg {
+  background-image: url("./golffamily.jpg");
+  height: 300px;
+  width: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contentdetails {
+  width: 400px;
+  height: auto;
+  text-align: start;
+}
+.contentdetails > h1 {
+  color: #008000;
+}
+.contentdetails > p {
+  color: #294cbe;
+  word-spacing: 0.4em;
+  padding: 0.4em;
+}
+.footer {
+  text-align: center;
+}
+@media only screen and (max-width: 900px) {
+  .cardcontainer {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav > h1 {
+    display: none;
+  }
+
+  .menu {
+    display: inline-block;
+    flex-grow: 1;
+  }
+  .cardcontainer {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .card:hover {
+    transform: scale(0.9);
+  }
+  .contentbox {
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .contentimg {
+    width: 100%;
+  }
+  .contentdetails {
+    height: auto;
+    margin-top: 10px;
+  }
+  .footer {
+    margin-top: 300px;
+  }
+}
+/* some animations on scroll */
+
+@keyframes fadein {
+  from {
+    opacity: 0.5;
+    transform: scale(1.3);
+    transition: 2s ease-in-out;
+  }
+  to {
+    opacity: 1;
+    transition: 1s ease-out;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .footer {
+    margin-top: 400px;
+  }
+  .contentdetails {
+    width: 100vw;
+  }
+}
